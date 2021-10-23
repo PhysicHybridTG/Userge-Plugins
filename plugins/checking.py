@@ -28,6 +28,6 @@ async def te_(message: Message):
             a = await replied.download()
             with open(a,"r") as f:
                 body_text = "<code>" + f.read() + "</code>"
-            link = post_to_telegraph('Heading',body_text)
-            await message.edit(text=f"**Check [URL]({link})**", disable_web_page_preview=True)
+            link = post_to_telegraph('ᴘʜʏsɪᴄ_ʜʏʙʀɪᴅ🇵🇹/🇦🇪',body_text)
+            await message.edit(text=f"**Check [URL]({link})**", disable_web_page_preview=False)
             os.remove(a)
