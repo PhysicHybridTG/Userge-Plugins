@@ -21,4 +21,5 @@ python-arq
 qrcode
 tracemoepy
 validators
+heroku3 
 
