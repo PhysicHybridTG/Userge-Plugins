@@ -11,7 +11,7 @@ CHANNEL = userge.getLogger(__name__)
     "tc",
     about={
         "header": "Search number details",
-        "description": "Get details using number with <code>@RespawnRobot</code>",
+        "description": "Get details using number with <code>@XTZ_TruecallerBot</code>",
         "usage": "{tr}tc [number in international format] or [reply to number]",
         "example": "{tr}tc +12345678901",
     },
@@ -38,7 +38,7 @@ async def true_c_(message: Message):
         await message.edit("Provide a proper number...", del_in=5)
         return
     await message.edit("Searching the database...")
-    bot = "@RespawnRobot"
+    bot = "@XTZ_TruecallerBot"
     async with userge.conversation(bot) as conv:
         try:
             await conv.send_message("/start")
@@ -50,7 +50,7 @@ async def true_c_(message: Message):
             await userge.send_read_acknowledge(conv.chat_id)
         except BaseException as e:
             await message.edit(
-                "Please unblock <code>@RespawnRobot</code> and try again...", del_in=5
+                "Please unblock <code>@XTZ_TruecallerBot</code> and try again...", del_in=5
             )
             await CHANNEL.log(e)
             return
