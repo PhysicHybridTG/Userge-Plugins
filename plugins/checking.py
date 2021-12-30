@@ -15,7 +15,7 @@ async def te_(message: Message):
         return
     if not ((replied.document
             and replied.document.file_name.endswith(
-                ('.jpg', '.jpeg', '.png', '.gif', '.mp4', '.html', '.txt', '.py', '.json'))
+                ('.jpg', '.jpeg', '.png', '.gif', '.mp4', '.html', '.txt', '.py', '.json' '.log'))
             and replied.document.file_size <= _T_LIMIT)):
         await message.err("not supported!")
         return
@@ -23,7 +23,7 @@ async def te_(message: Message):
     if (replied.text
         or (replied.document
             and replied.document.file_name.endswith(
-            ('.html', '.txt', '.py', '.json')))):
+            ('.html', '.txt', '.py', '.json' '.log')))):
         if replied.document:
             a = await replied.download()
             with open(a,"r") as f:
